@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <div id="main">
+          <ul id="list">
+              <li>html</li>
+              <li>css</li>
+          </ul>
+      </div>
+        <div id="copyright">(c) INTOCODE</div>
+
+
+    <script>
+        const body = document.querySelector('body');
+
+        const createDomCooler = () => {
+            const dom = document.createElement('h1');
+            dom.textContent = 'Работа с DOM';
+            document.body.prepend(dom)
+        }
+        createDomCooler()
+
+        const createUrlCooler = () => {
+            const url = document.createElement('a');
+            url.textContent = 'DOM';
+            url.href = 'https://learn.javascript.ru/dom-nodes';
+            url.target = '_blank';
+            url.style.color = 'black'
+            document.body.append(url);
+        }
+        createUrlCooler();
+
+        const changeColorCooler = (color) => {
+            body.style.backgroundColor = color
+        }
+        changeColorCooler('darkslateblue');
+
+        const createTextCooler = (text) => {
+            const liCooler = document.createElement('li');
+            liCooler.textContent = text;
+            list.append(liCooler);
+        }
+        createTextCooler('Java');
+       
+       const destroyCopyright = (e) => {
+         
+            e.remove();
+       }
+       destroyCopyright(copyright)
+
+        document.body.append(body);
+        body.append(dom);
+        
+    </script>
+</body>
+</html>
